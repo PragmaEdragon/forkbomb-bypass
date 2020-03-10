@@ -1,4 +1,4 @@
-# forkomb-bypass
+# forkbomb-bypass
 Write-ups for solving bypass related tasks
 
 I had problems with this type of attack. 
